@@ -1,0 +1,129 @@
+@import "../../../vars";
+
+:host {
+  min-width: 540px;
+}
+
+.background,
+.asset {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.background {
+  background-position: center;
+}
+.asset-line {
+  display: flex;
+  justify-content: space-between;
+}
+.asset {
+  width: 140px;
+  height: 140px;
+  margin: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1399px) {
+  .asset-line:nth-child(1) {
+    .asset:nth-child(1) {
+      margin: 40px 60px 40px 20px;
+    }
+    .asset:nth-child(2) {
+      margin: 40px 20px 40px 60px;
+    }
+  }
+  .asset-line:nth-child(2) {
+    .asset:nth-child(1) {
+      margin: 40px 60px 40px 20px;
+    }
+    .asset:nth-child(2) {
+      margin: 40px 20px 40px 60px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .asset {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 999px) {
+  .asset {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 899px) {
+  .background {
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 699px) {
+  .asset {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 599px) {
+  .asset {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 599px) {
+  .asset-line:nth-child(1) {
+    .asset:nth-child(1) {
+      margin: 20px 30px 20px 10px;
+    }
+    .asset:nth-child(2) {
+      margin: 20px 10px 20px 30px;
+    }
+  }
+  .asset-line:nth-child(2) {
+    .asset:nth-child(1) {
+      margin: 20px 30px 20px 10px;
+    }
+    .asset:nth-child(2) {
+      margin: 20px 10px 20px 30px;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .asset {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 439px) {
+  .asset-line:nth-child(1) {
+    .asset:nth-child(1) {
+      margin: 10px 15px 20px 5px;
+    }
+    .asset:nth-child(2) {
+      margin: 10px 5px 20px 15px;
+    }
+  }
+  .asset-line:nth-child(2) {
+    .asset:nth-child(1) {
+      margin: 10px 15px 20px 5px;
+    }
+    .asset:nth-child(2) {
+      margin: 10px 5px 20px 15px;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .asset {
+    width: 70px;
+    height: 70px;
+  }
+}

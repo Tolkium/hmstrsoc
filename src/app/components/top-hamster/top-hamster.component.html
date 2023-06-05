@@ -1,0 +1,14 @@
+<div class="background" [ngStyle]="{'background-image': 'url(' + shown_hamster.hamster + ')'}">
+  <div class="asset-line">
+    <div class="asset" [ngStyle]="{'background-image': 'url(' + shown_hamster.clothes + ')', 'background-color': background_colors[shown_hamster.colors[0]]}">
+    </div>
+    <div class="asset" [ngStyle]="{'background-image': 'url(' + shown_hamster.headwear + ')', 'background-color': background_colors[shown_hamster.colors[1]]}">
+    </div>
+  </div>
+  <div class="asset-line">
+    <div class="asset" [ngStyle]="{'background-image': 'url(' + shown_hamster.eyes + ')', 'background-color': background_colors[shown_hamster.colors[3]]}">
+    </div>
+    <div class="asset" [ngStyle]="{'background-image': 'url(' + shown_hamster.mouths + ')', 'background-color': background_colors[shown_hamster.colors[2]]}">
+    </div>
+  </div>
+</div>

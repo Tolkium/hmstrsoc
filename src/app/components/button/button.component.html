@@ -1,0 +1,12 @@
+<div [ngClass]="{'button_pressed' : pressed, 'button_released': !pressed}">
+  <a
+    class="h2 {{button_class}}"
+    [ngStyle]="{'padding' : button_padding_y+'px '+button_padding_x+'px'}"
+    [ngClass]="{'button_pressed' : pressed, 'button_released': !pressed}"
+    href="{{button_link}}"
+    (mousedown)="pressButton()"
+    (mouseup)="unpressButton()"
+  >
+    {{button_title | uppercase}}
+  </a>
+</div>

@@ -1,0 +1,28 @@
+@import "../../../vars";
+
+a {
+  font-family: "Headline", monospace;
+  color: $col-font-2;
+  
+  background-image: $col-gradient-1;
+  border: 2px solid $col-font-2;
+  border-radius: 30px;
+}
+
+a.button_pressed {
+  box-shadow: 0px 1px 10px $col-other-2;
+}
+
+a.button_released {
+  box-shadow: 0px 5px $col-other-1, 1px 6px 10px $col-other-2;
+}
+
+div.button_pressed {
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+div.button_released {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

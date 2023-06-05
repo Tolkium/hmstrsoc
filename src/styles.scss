@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+// SCSS vars used in the project
+@import "_vars";
+
+#container1 {
+  background: $col-background-6;
+  color: $col-font-1;
+
+  .container {
+    padding-bottom: 0;
+  }
+  
+  .logo-text > img {
+    width: 90%;
+  }
+
+  .button {
+    margin-bottom: -25px;
+  }
+}
+
+#container2 {
+  background: $col-background-7;
+  color: $col-font-1;
+}
+
+#container3 {
+  background: $col-background-2;
+  color: $col-font-1;
+
+  .bubble-wall > img {
+    width: 100%;
+  }
+}
+
+#container4 {
+  background: url(assets/images/hamster_background.webp) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: $col-font-2;
+}
+
+#container5 {
+  background: $col-background-1;
+  color: $col-font-1;
+
+  .gif > img {
+    width: 300px;
+  }
+}
+
+#container6 {
+  background: $col-background-3;
+  color: $col-font-1;
+
+  .gif {
+    align-self: center;
+    justify-content: center;
+  }
+
+  .gif > img {
+    width: 500px;
+  }
+}
+
+#container7 {
+  background: $col-background-4;
+  color: $col-font-2;
+}
+
+#container8 {
+  background: $col-background-5;
+  color: $col-font-1;
+}
+
+#container9 {
+  background: $col-background-2;
+  color: $col-font-1;
+}
+
+.container {
+  padding: 90px 40px;
+}
+
+.main-text {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  
+  h1 {
+    font-family: 'Headline', monospace;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-family: 'Aristotelica Display Regural', monospace;
+    font-size: 1.3rem;
+  }
+}
+
+.faq-text {
+  margin-bottom: 1rem;
+  
+  h1 {
+    font-family: 'Aristotelica Display Regural', monospace;
+    font-size: 2rem;
+  }
+
+  p {
+    font-family: 'Aristotelica Display Regural', monospace;
+    font-size: 1.3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 899px) {
+  .main-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .faq-text {
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 349px) {
+  .faq-text {
+    h1 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+<div class="asset-wall" *ngFor="let image of images; let i = index">
+  <img [ngStyle]="{'background-color' : image.color}" src="../../../assets/images/asset-wall/{{image.path}}" alt="image {{i}}">
+</div>

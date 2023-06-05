@@ -1,0 +1,8 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5402bfac-153e-4197-ba87-8feacb4dc1a6/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/hmstrsocwin",
+    "appService.deploySubpath": "dist\\moralis-angular-app",
+    "appService.zipIgnorePattern": [
+      "node_modules{,/**}",
+      ".vscode{,/**}"
+    ]
+}

@@ -1,0 +1,43 @@
+@import "../../../vars";
+
+:host {
+  border-radius: 20px;
+  background-color: $col-other-3;
+  text-align: center;
+  color: $col-font-2;
+  margin: 15px;
+  padding: 25px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 115px;
+}
+
+fa-icon {
+  float: right;
+  background-image: $col-gradient-1;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  font-size: 30px;
+}
+
+.icon {
+  display: block;
+}
+
+h1 {
+  font-family: 'Headline', monospace;
+  font-size: 4.5rem;
+}
+
+li {
+  font-family: 'Aristotelica Display Light', monospace;
+  font-size: 1.3rem;
+}
+
+.blur {
+  text-shadow: 0 0 14px white;
+  color: transparent;
+}

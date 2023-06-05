@@ -1,0 +1,9 @@
+<div class="icon">
+  <fa-icon [icon]="faCheck" *ngIf="checked"></fa-icon>
+</div>
+<h1 [ngStyle]="{'margin-top' : checked ? '-45px' : '0'}">{{percentage}}</h1>
+<div>
+  <ul [ngClass]="{blur: blurred}">
+    <li *ngFor="let point of points">{{point}}</li>
+  </ul>
+</div>

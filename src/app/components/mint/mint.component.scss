@@ -1,0 +1,83 @@
+@import "../../../vars";
+
+.mint_text {
+  font-family: 'Headline', monospace;
+  color: $col-font-2;
+  font-size: 1.4rem;
+}
+
+.mint_text .mint_big,
+.mint_text.mint_big {
+  font-size: 4rem;
+}
+
+.mint_margin {
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 50px;
+}
+
+.mint_text .slash {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.helper-text {
+  font-family: 'Aristotelica Display Regural', monospace;
+  color: $col-font-2;
+  font-size: 1.4rem;
+  margin-bottom: -2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1199px) {
+  .mint_text .mint_big,
+  .mint_text.mint_big {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .already-minted,
+  .mint-amount,
+  .mint-price {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-width: 340px;
+  }
+
+  .mint-amount {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 499px) {
+  .mint_text .mint_big,
+  .mint_text.mint_big {
+    font-size: 2.5rem;
+  }
+
+  .already-minted,
+  .mint-amount,
+  .mint-price {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .mint-amount {
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    padding: 60px 20px 80px 20px;
+  }
+}
+
+@media (max-width: 399px) {
+  .already-minted,
+  .mint-amount,
+  .mint-price {
+    min-width: 300px;
+  }
+  
+}

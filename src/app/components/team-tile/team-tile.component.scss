@@ -1,0 +1,62 @@
+@import "../../../vars";
+
+:host {
+  max-width: 300px;
+  text-align: center;
+  margin: 15px 5px;
+  padding: 0 25px;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid ;
+  height: 250px;
+}
+
+h1 {
+  font-family: 'Headline', monospace;
+  margin-top: 15px;
+}
+
+p {
+  font-family: 'Aristotelica Display Regural', monospace;
+  font-size: 1.3rem;
+}
+
+p.role {
+  margin-bottom: 0.2rem;
+}
+
+.tom {
+  color: $col-team-tom;
+}
+.adam {
+  color: $col-team-adam;
+}
+.keisi {
+  color: $col-team-keisi;
+}
+.simeon {
+  color: $col-team-simeon;
+}
+.dowd {
+  color: $col-team-dowd;
+}
+.erik {
+  color: $col-team-erik;
+}
+.mike {
+  color: $col-team-mike;
+}
+
+p.about {
+  font-size: 1rem;
+}
+
+@media (max-width: 719px) {
+  :host {
+    img {
+      height: 200px;
+    }
+  }
+}

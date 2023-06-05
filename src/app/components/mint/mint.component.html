@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col align-self-center text-center already-minted">
+      <p class="mint_text">
+        <span class="mint_big">{{mintedTokenSupply}}</span>
+        <span class="slash">/</span>
+        <span>{{maxSupply}} sold</span>
+      </p>
+    </div>
+    <div *ngIf="(preSaleMaxMintAmount - presaleAlreadyMintedAmountForUser > 0)
+                || (saleMaxMintAmount - saleAlreadyMintedAmountForUser > 0)"
+          class="col align-self-center text-center d-flex justify-content-center align-items-center mint-amount"
+    >
+      <!-- Click callback needs to send event as well - because we need to stop propagation (for the buttons that should not redirect) -->
+      <app-button
+        button_title='-'
+        button_padding_y='10'
+        button_padding_x='30'
+        (click)="minusMint($event)"
+      ></app-button>
+      <span class="mint_text mint_big mint_margin">{{mint_amount}}</span>
+      <!-- Click callback needs to send event as well - because we need to stop propagation (for the buttons that should not redirect) -->
+      <app-button
+        button_title='+'
+        button_padding_y='10'
+        button_padding_x='27'
+        (click)="plusMint($event)"
+      ></app-button>
+    </div>
+    <div class="col align-self-center text-center mint-price">
+      <p class="mint_text">
+        <span class="mint_big">{{price_total | weiToEth}} ETH</span>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col align-self-center text-center py-4">
+      <!-- Click callback needs to send event as well - because we need to stop propagation (for the buttons that should not redirect) -->
+      <app-button
+        button_title='mint!'
+        button_padding_y='10'
+        button_padding_x='70'
+        (click)="mint($event)"
+      ></app-button>
+    </div>
+  </div>
+  <div *ngIf="loggedInUser" class="row">
+    <div *ngIf="presaleStarted && (preSaleMaxMintAmount - presaleAlreadyMintedAmountForUser > 0)" class="col align-self-center text-center helper-text">
+      You can mint a maximum of {{preSaleMaxMintAmount - presaleAlreadyMintedAmountForUser}} NFTs...
+    </div>
+    <div *ngIf="saleStarted && (saleMaxMintAmount - saleAlreadyMintedAmountForUser > 0)" class="col align-self-center text-center helper-text">
+      You can mint a maximum of {{saleMaxMintAmount - saleAlreadyMintedAmountForUser}} NFTs...
+    </div>
+    <div *ngIf="presaleStarted && (preSaleMaxMintAmount - presaleAlreadyMintedAmountForUser == 0)" class="col align-self-center text-center helper-text">
+      Out of mints, but don't worry and wait for public sale!
+    </div>
+    <div *ngIf="saleStarted && (saleMaxMintAmount - saleAlreadyMintedAmountForUser == 0)" class="col align-self-center text-center helper-text">
+      Out of mints...
+    </div>
+
+  </div>
+</div>

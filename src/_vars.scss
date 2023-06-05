@@ -1,0 +1,52 @@
+// Colors used in the project
+
+// Backgrounds
+$col-background-1: #936BFF;
+$col-background-2: #FCF1DB;
+$col-background-3: #F6D179;
+$col-background-4: #04032B;
+$col-background-5: #FFFEF9;
+$col-background-6: #242328;
+$col-background-7: #8002ec;
+
+// Fonts
+$col-font-1: #04032B;
+$col-font-2: #FFFEF9;
+
+// Gradients
+$col-gradient-1: linear-gradient(#EFBE00, #F57701);
+
+// Other colors
+$col-other-1: #F57701;
+$col-other-2: #222224;
+$col-other-3: #04032B;
+
+// Team tile colors
+$col-team-tom: #00d6d5;
+$col-team-adam: #d8666d;
+$col-team-keisi: #aef040;
+$col-team-simeon: #f36353;
+$col-team-dowd: #fc803a;
+$col-team-erik: #f4d55c;
+$col-team-mike: #db2211;
+
+// Sizes
+$size-regural: 20px;
+
+// Custom fonts used in the project
+@font-face {
+  font-family: 'Headline';
+  src: url(assets/fonts/Headlines_Title_Font.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Aristotelica Display Light';
+  src: url(assets/fonts/Aristotelica_Display_Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Aristotelica Display Regural';
+  src: url(assets/fonts/Aristotelica_Display_Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Aristotelica Text Regural';
+  src: url(assets/fonts/Aristotelica_Text_Regular.otf) format('opentype');
+}

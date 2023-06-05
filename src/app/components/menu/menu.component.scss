@@ -1,0 +1,20 @@
+@import "../../../vars";
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+a {
+  font-family: 'Aristotelica Display Light', monospace;
+  color: $col-font-2;
+  text-decoration: none;
+  font-size: $size-regural;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+img {
+  height: 45px;
+}

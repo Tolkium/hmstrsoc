@@ -1,0 +1,456 @@
+<!-- PRELOAD FOR IMAGES -->
+<div class="d-none">
+  <div *ngFor="let hamster of hamsters; index as i">
+    <img [src]="hamster.hamster" alt="hamster asset {{i}}" />
+    <img [src]="hamster.headwear" alt="headwear asset {{i}}" />
+    <img [src]="hamster.eyes" alt="eyes asset {{i}}" />
+    <img [src]="hamster.mouths" alt="mouths asset {{i}}" />
+    <img [src]="hamster.clothes" alt="clothes asset {{i}}" />
+  </div>
+</div>
+
+<!-- JUMBOTRON -->
+<div id="container1">
+  <div class="container">
+    <div class="row big-screen">
+      <div class="col-9">
+        <app-menu></app-menu>
+      </div>
+      <div class="col-3">
+        <app-social-icons color='white' size='25'></app-social-icons>
+      </div>
+    </div>
+    <div class="small-screen-icon justify-content-end">
+      <img src="../../../assets/images/logo_head.png" (click)="small_menu_is_collapsed = !small_menu_is_collapsed">
+    </div>
+    <div [ngbCollapse]="small_menu_is_collapsed" class="small-screen">
+      <div class="d-flex flex-column align-items-stretch font2 text-center">
+        <a href="#container4">
+          Story
+        </a>
+        <a href="#container5">
+          Roadmap
+        </a>
+        <a href="#container7">
+          Team
+        </a>
+        <a href="#container8">
+          FAQ
+        </a>
+        <div>
+          <app-social-icons color='white' size='25'></app-social-icons>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-7 align-self-end">
+        <app-top-hamster></app-top-hamster>
+      </div>
+      <div class="col-5">
+        <div class="row">
+          <div class="col">
+            <div class="logo-text text-center">
+              <img src="../../../assets/images/logo_text.png" alt="Logo">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center button">
+            <!-- Click callback needs to send event as well - because we need to stop propagation (for the buttons that should not redirect) -->
+            <app-button
+              [button_title]='mainButtonTitle'
+              button_padding_y='10'
+              button_padding_x='40'
+              (click)="onMainButtonClick($event)"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINT -->
+<div id="container2" [ngbCollapse]="mint_is_collapsed">
+  <app-mint></app-mint>
+</div>
+
+<!-- INTRO -->
+<div id="container3">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col main-text">
+            <h1>
+              WHAT IS THE HAMSTER SOCIETY
+            </h1>
+            <p>
+              The Hamster Society is a collection of 10,000 Hamster NFTs – unique, randomly-generated digital collectibles on the Ethereum blockchain.<br>Whilst the Hamsters are one family they can be distinguished between The Genesis Generation - the first 2,500 Hamsters with the original special characteristic and exclusive perks, as well as 7,500 of The New Age Generation all with a unique look.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col main-text">
+            <h1>
+              RARITY
+            </h1>
+            <p>
+              The collection features various combinations of 225+ unique character traits through expressions, outfits and accessories.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col bubble-wall">
+        <img src="../../../assets/images/bubbles_wall_flip.png" alt="Bubble wall">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-asset-wall></app-asset-wall>
+        <p class="asset-wall" style="text-align: center;">... and many more!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div id="container4">
+  <div class="container">
+    <div class="row">
+      <div class="col main-text">
+        <h1>
+          HOW IT ALL STARTED
+        </h1>
+        <p>
+          The story dates back to times long past, when mankind lived in peace and harmony with hamsters. The aspect of their lives that Hamsters kept secret from us,  was that they were the ones looking after our planet. For decades, humanity was slowly destroying our planet and hamsters knew it wouldn’t be long until it wasn’t habitable anymore.
+          <br>
+          <br>
+          As a result, they decided to gather supplies and build a new society underground. The first hamster to roll off to the underground was Hamso,  he was the founder of The Hamster Society where hamsters lived together and expanded their Kingdom. After years of living in their Society, the hamsters realised that they have an empty spot in their hearts. They missed the love and care of the children that they once belonged to. Even if we aren’t taking care of the world, the children are not to blame.
+          <br>
+          <br>
+          Because of this, they decided to give humanity one last chance and come back outside after all these years. The reason behind it was simple,  they had an aim to help this planet by teaching the young generation how to take care of the environment and help the world they are living in, because unfortunately, we don’t get a second chance. They were the first ones to realise and that’s why they are our last hope.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROADMAP -->
+<div id="container5">
+  <div class="container">
+    <div class="row">
+      <div class="col main-text">
+        <h1>
+          WHAT'S ON THE ROADMAP?
+        </h1>
+        <p>
+          By collecting the hamsters you'll have a voice in the community and help guide the direction of the project and development of the story. Already some great ideas have come from early members of the community. Working together we can continue to grow The Hamster Society and make the world a better place!
+        </p>
+      </div>
+      <div class="col text-center gif align-self-center">
+        <img src="../../../assets/images/hamster_in_wheel.webp" alt="Hamster in a wheel">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex flex-wrap justify-content-center">
+        <app-roadmap-tile
+          percentage='20%'
+          [points]="['Snapshot of our early supporters (FREE airdrop YOU DON`T WANT TO MISS!)','Weekly Society Meetings (AMAs)']"
+        ></app-roadmap-tile>
+        <app-roadmap-tile
+          percentage='40%'
+          [points]="['20 ETH to our community wallet', '10 random holders will receive a FREE additional Hamster', 'Hamster Companion finalisation']"
+        ></app-roadmap-tile>
+        <app-roadmap-tile
+          percentage='60%'
+          [points]="['Adding additional 20 ETH to our community wallet', 'Start production of our Animated Educational videos for children (project to educate the youth on multiple important subjects in a fun/engaging way)','Community ETH Raffles for holders!']"
+        ></app-roadmap-tile>
+        <app-roadmap-tile
+          class="large-roadmap-tile"
+          percentage='80%'
+          [points]="['Billboards in NYC, LA & Europe', 'Global marketing campaign to bring further attention to our project', 'Preparations of a BRAND NEW REVOLUTIONAL BREEDING CONCEPT (will redefine how breeding is done in NFT scene)', 'Start working on our Exclusive HOLDERS ONLY merch (collab?)']"
+        ></app-roadmap-tile>
+        <app-roadmap-tile
+          percentage='100%'
+          [points]="['200.000,00$+ (60ETH) donation split between our two main causes', 'Staking Mechanism to Earn Hamster Society Token', 'Play to Earn Arcade (Using Hamster Society Token to Play)']"
+        ></app-roadmap-tile>
+        <app-roadmap-tile
+          percentage='?'
+        ></app-roadmap-tile>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="container6">
+  <div class="container">
+    <div class="row">
+      <div class="col main-text">
+        <h1>
+          WHAT'S GONNA HAPPEN AFTER WE SELL OUT?
+        </h1>
+        <p>
+          Whilst the team have been working away making the project a reality we always keep our eye on the road ahead. We have been developing various additions and mechanisms to add value to our patrons; This includes a Staking mechanism where holders can earn tokens - These tokens can then be used in our Play to Earn Arcade where you will be able to win various benefits and prizes.
+          <br><br>
+          Aside from this, as the society grows, we will be looking at expanding the DAO element to be able to capitalise on any opportunistic investment proposals that may arise - This allows holders to realise a much higher value return on items than they may have got individually - As an example we have recently seen a DAO come close to buying an original copy of the declaration of independence, or Murat Paks recent Merge project where DAOs were formed to specifically buy as many units as possible as a group to capitalise on the additional benefits.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col main-text half-text">
+        <h1>
+          HOW ARE WE GOING TO MAKE A CHANGE?
+        </h1>
+        <p>
+          Hamsters came to teach us about things long forgotten and make a change. To fulfill their purpose, we collect part of the money raised into our community wallet and decide upon the causes we would like to focus on. We focus on two main causes we will be supporting – increasing awareness about sustainability among future generations (aged 6-13) and by direct investments from the money raised into charities/green projects directed  to make a change for a better future. These joint efforts will continue even after our initial donation of US$200,000+ (60 ETH) as we strive to make the biggest impact possible.
+        </p>
+      </div>
+      <div class="col d-flex gif">
+        <img src="../../../assets/images/hiding_hamster.webp" alt="Hiding hamster">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<div id="container7">
+  <div class="container">
+    <div class="row">
+      <div class="col main-text">
+        <h1>
+          MEET THE TEAM
+        </h1>
+        <p>
+          Introducing amazing team which made this project possible.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex flex-wrap justify-content-center">
+        <app-team-tile
+          name="tom"
+          img_path="tom.webp"
+          role="Project Lead & Marketing"
+          about="Tom worked in Marketing, PR, and Community Management with previous experience leading successful projects since 2018. He started his NFT journey in the early summer of ‘21."
+        ></app-team-tile>
+        <app-team-tile
+          name="adam"
+          img_path="adam.webp"
+          role="Solidity & Backend Developer"
+          about="As one of the first people on the project, Adam took the role of Solidity & Backend. His main focus is on smart contract deployment, Solidity & Web3 integration, but majorly helped shape the project and planning."
+        ></app-team-tile>
+        <app-team-tile
+          name="keisi"
+          img_path="keisi.webp"
+          role="Artist & Creative Director"
+          about="Keisi is our digital artist and illustrator from Albania. She has been working in the field for nearly 10 years in the graphic design and digital art area, while focused on mixing different artistic techniques in her artworks."
+        ></app-team-tile>
+        <app-team-tile
+          name="simeon"
+          img_path="simeon.webp"
+          role="Fullstack Developer"
+          about="Simeon, being our most senior developer, pursues university studies for 7 years and does coding for over 8 years as a full-stack engineer. His specialization is in Game Development and Front End of our website."
+        ></app-team-tile>
+        <app-team-tile
+          name="dowd"
+          img_path="dowd.webp"
+          role="Strategy, Marketing & Community Management"
+          about="Dowd is the Old Man of the team and has worked in the online space in various fields for 15+ years. With experience in Business Strategy, Marketing, and Finance as well as in the Community, Software & Direct to Consumer space, he brings a wealth of experience to the team."
+        ></app-team-tile>
+        <app-team-tile
+          name="erik"
+          img_path="erik.webp"
+          role="Web Development & Design"
+          about="Erik started with web design when he was 12. Previously worked as a full-time full-stack developer over the last 9 years before moving toward NFT space as sees NFTs & Metaverse as the next big thing and would like to narrow down his focus in this direction."
+        ></app-team-tile>
+        <app-team-tile
+          name="mike"
+          img_path="mike.webp"
+          role="Research & Development"
+          about="Mike is responsible for our internal research related to NFT landscape, development of white paper, and webpage contents. He has experience across the investment industry from corporate finance, asset management and private investments."
+        ></app-team-tile>
+        <app-team-tile
+          name="You?"
+          img_path="you.webp"
+        ></app-team-tile>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="container8">
+  <div class="container">
+    <div class="row">
+      <div class="col main-text" style="margin-bottom: 0rem;">
+        <h1>
+          FAQ
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              When can we mint the hamsters?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_1_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_1_is_collapsed = !faq_1_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_1_is_collapsed">
+          <div class="d-flex">
+            <p>
+              The date of release will be announced soon via our Discord & Social Medias. Keep your eyes peeled for further news!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              What is the mint price?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_2_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_2_is_collapsed = !faq_2_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_2_is_collapsed">
+          <div class="d-flex">
+            <p>
+              Mint Price will be determined at a later date, announced together with the launch date. Due to the violent crypto market, we want to satisfy everyone with the pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              Which wallet should I use?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_3_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_3_is_collapsed = !faq_3_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_3_is_collapsed">
+          <div class="d-flex">
+            <p>
+              The website is optimised to be used with <a href="https://metamask.io/">MetaMask <img class="metamask-logo" src="../../../assets/images/metamask-fox.svg" alt="MetaMask icon"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              How many hamsters can I mint?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_4_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_4_is_collapsed = !faq_4_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_4_is_collapsed">
+          <div class="d-flex">
+            <p>
+              The limit for Presale (Whitelist) minting is 2 Hamsters per Wallet. The limit for our Public Sale will be 5 hamsters per Wallet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              When will my hamster be revealed?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_5_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_5_is_collapsed = !faq_5_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_5_is_collapsed">
+          <div class="d-flex">
+            <p>
+              Your Hamsters will be revealed 48-72 Hours after Release.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col faq-text">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>
+              How can I contact the team?
+            </h1>
+          </div>
+          <div>
+            <div class="arrow">
+              <img alt="arrow" [src]="faq_6_is_collapsed ? '../../../assets/images/arrow_down.png' : '../../../assets/images/arrow_up.png'" (click)="faq_6_is_collapsed = !faq_6_is_collapsed">
+            </div>
+          </div>
+        </div>
+        <div [ngbCollapse]="faq_6_is_collapsed">
+          <div class="d-flex">
+            <p>
+              Team can be contacted easiest direct through Discord Ticket or via e-mail: info@hmstrsoc.io
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div id="container9">
+  <div class="container">
+    <div class="row">
+      <div class="col-9 main-text">
+        <h1>
+          JOIN THE COMMUNITY
+        </h1>
+        <p>
+          The Hamster Society is a collection of unique characters all digitally hand-drawn and minted as NFTs.
+        </p>
+      </div>
+      <div class="col-3 big-screen-footer">
+        <app-social-icons color='black' size='25' style="margin-top: 2rem;"></app-social-icons>
+      </div>
+    </div>
+    <div class="row small-screen-footer">
+      <div class="col">
+        <app-social-icons color='black' size='25' style="margin-top: 2rem;"></app-social-icons>
+      </div>
+    </div>
+  </div>
+</div>
